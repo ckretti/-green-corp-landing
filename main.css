@@ -1,8 +1,12 @@
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 20px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+    justify-content: space-between;
 }
 
 body {
@@ -44,9 +48,21 @@ button {
     width: 500px;
 }
 
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .about__sun-image {
     width: 100px;
     height: 100px;
+    animation: rotation 10s linear infinite;
+    position: absolute;
 }
 
 .about {
@@ -195,3 +211,14 @@ footer {
 .footer__links a {
     margin: 0 0 15px 0;
 }
+
+@media (max-width: 320px) {
+
+    /* телефон */
+}
+
+@media (max-width: 720px) {
+    /* планшет */
+}
+
+@media (min-width: 720px) {}
