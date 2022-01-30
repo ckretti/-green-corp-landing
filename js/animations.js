@@ -44,6 +44,8 @@ document.querySelector('#budget').addEventListener('change', function handleSele
     }
 });
 
+let animationInited = false;
+
 function updateScroll() {
     if (window.scrollY > 0) {
         document.querySelector('header').classList.add('header__scrolled');
